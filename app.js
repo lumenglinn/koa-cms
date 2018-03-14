@@ -13,7 +13,7 @@ onerror(app);
 // global middlewares
 app.use(views('views', {
   root: __dirname + '/views',
-  default: 'jade'
+  default: 'ejs'
 }));
 app.use(require('koa-bodyparser')());
 app.use(json());
@@ -27,6 +27,7 @@ app.use(function *(next){
 });
 
 app.use(require('koa-static')(__dirname + '/public'));
+app.use(require('koa-static')(__dirname + '/application'))
 
 // routes definition
 app.use(index.routes(), index.allowedMethods());
@@ -38,3 +39,6 @@ app.on('error', (err, ctx) => {
 });
 
 module.exports = app;
+
+
+// "precommit": "npm run lint-staged",

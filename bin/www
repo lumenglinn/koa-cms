@@ -3,6 +3,13 @@
 /**
  * Module dependencies.
  */
+require('babel-core/register')({
+  'presets': [
+      'stage-3',
+      // ["latest-node", { "target": "current" }]
+  ]
+})
+require('babel-polyfill');
 
 var app = require('../app');
 var debug = require('debug')('demo:server');
@@ -12,7 +19,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '8086');
 // app.set('port', port);
 
 /**
