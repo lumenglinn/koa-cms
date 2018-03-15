@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import styles from './IndexPage.css';
 import { Layout, Icon , Menu, Avatar } from 'antd';
+import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import Config from '../utils/config'
 const {Header, Sider, Content, Footer} = Layout
@@ -31,8 +32,10 @@ class IndexPage extends React.Component {
           <div className={styles.logo}>哎哟哎呀</div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} onClick={this.handleClick}>
             <Menu.Item key="1" >
+            <Link to='/user' >
               <Icon type="user"/>
               <span className="nav-text">nav 1</span>
+              </Link>
             </Menu.Item > 
             <Menu.Item key="2">
               <Icon type="video-camera" />
