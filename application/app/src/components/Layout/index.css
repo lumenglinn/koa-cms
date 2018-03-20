@@ -1,0 +1,19 @@
+.logo {
+    font-size: 16px;
+    line-height: 64px;
+    text-align: center;
+    vertical-align: text-bottom;
+    font-weight: 700;
+    color: #1890ff;
+    white-space: nowrap;
+  }
+  
+  .ant-layout-header {
+    position: relative;
+  }
+  .userIcon {
+    position: absolute !important;
+    top: 14px;
+    right: 20px;
+    font-size: 23px;
+  }
